@@ -84,8 +84,9 @@ def find_first_occurrence_of_30():
     search_for = 30
     for i in range(len(numbers)):
         if numbers[i] == search_for:
-            print(f"{search_for} occurred at index {i+1} in the list")
+            print(f"{search_for} occurred at index {i + 1} in the list")
             break
+
 
 # Continue: Using continue statement, print only the odd numbers from 1 to 10.
 def print_odd_numbers():
@@ -122,7 +123,6 @@ def find_weekday_or_weekend():
             print(f"{user_input} is a weekend")
         case _:
             print(f"ERROR: Invalid input {user_input}")
-
 
 
 if __name__ == '__main__':
