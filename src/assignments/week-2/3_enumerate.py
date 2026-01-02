@@ -1,22 +1,20 @@
 # Using below list and enumerate(), print index followed by value.
-#
-# Input: fruits = ["apple", "banana", "cherry"]
-# Output:
-# 0 apple
-# 1 banana
-# 2 cherry
-#
+def enumerate_and_print_index(input_values):
+    for index, value in enumerate(input_values):
+        print(f"{index}: {value}")
+
+
 # Using below dict and enumerate, print key followed by value
-#
-# Input: person = {"name": "Alice", "age": 30, "city": "New York"}
-#
-# Output:
-# name: Alice
-# age: 30
-# city: New York
-#
-# Given the list fruits = ["apple", "banana", "cherry", "date", "elderberry"], use enumerate() to create a list of
-# tuples where each tuple contains the index and the corresponding fruit, but only for even indices.
-#
-#   Output:
-#              [(2, 'banana'), (4, 'date')]
+def enumerate_and_print_index_dictionary(input_values):
+    for index, (key, value) in enumerate(input_values.items()):
+        print(f"{key}: {value}")
+
+
+def enumerate_fruits(fruits):
+    return [(i, fruit) for i, fruit in enumerate(fruits, start=1) if i % 2 == 0]
+
+
+if __name__ == '__main__':
+    enumerate_and_print_index(["apple", "banana", "cherry"])
+    enumerate_and_print_index_dictionary({"name": "Alice", "age": 30, "city": "New York"})
+    print(enumerate_fruits(["apple", "banana", "cherry", "date", "elderberry"]))
